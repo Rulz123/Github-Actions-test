@@ -19,14 +19,7 @@ jobs:
 
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v2
-
-      - name: Verify solution exists
-        run: |
-          ls Alfa-1-aars-eksamens-projekt
-          if (!(Test-Path "./Alfa-1-aars-eksamens-projekt/Alfa-1-aars-eksamens-projekt.sln")) {
-            throw "Solution file not found!"
-          }
-
+        
       - name: Restore dependencies
         run: msbuild "./Alfa-1-aars-eksamens-projekt/Alfa-1-aars-eksamens-projekt.sln" /t:Restore
 
