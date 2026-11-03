@@ -1,3 +1,4 @@
+
 name: Build Main Branch
 
 on:
@@ -9,24 +10,25 @@ on:
 
 jobs:
   build:
-    name: Build .NET Solution
+    name: Build C# Solution
     runs-on: ubuntu-latest
 
     steps:
-      # Check out source code
       - name: Checkout source code
         uses: actions/checkout@v4
 
-      # Install .NET SDK
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x'
 
-      # Restore NuGet packages
-      - name: Restore dependencies
-        run: dotnet restore
+      - name: Verify solution exists
+        run: |
+          ls -la
+          test -f "./Alfa-1-aars-eksamens-projekt.sln"
 
-      # Build all projects in the repository
+      - name: Restore dependencies
+        run: dotnet restore "./Alfa-1-aars-eksamens-projekt.sln"
+
       - name: Build solution
-        run: dotnet build --no-restore --configuration Release
+        run: dotnet build "./Alfa-1-aars-eksamens-projekt.sln" --no-restore --configuration Release
