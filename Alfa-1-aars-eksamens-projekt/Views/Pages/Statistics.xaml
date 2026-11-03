@@ -1,0 +1,70 @@
+﻿<Page x:Class="Alfa_1_aars_eksamens_projekt.Views.Pages.Statistics"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:uc="clr-namespace:Alfa_1_aars_eksamens_projekt.Views.Partials"
+      xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      xmlns:local="clr-namespace:Alfa_1_aars_eksamens_projekt.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="Statistikker - Environmental Friendly">
+    <!--Xaml code done by Keemon-->
+    <!--The grid uses a dynamic resource for general styling-->
+    <Grid Background="White" Style="{DynamicResource RoundCornerMediumGreenGrid}">
+        <Grid HorizontalAlignment="Left" Height="184" Margin="315,120,0,0" VerticalAlignment="Top" Width="311">
+            <!--This is our line chart, which has its Series bound to our SeriesCollection, Y-axis bound to YFormatter and X-axis bound to Labels-->
+            <lvc:CartesianChart Name="lineChart" Series="{Binding SeriesCollection}" LegendLocation="Right" Margin="-63,0,-300,-305" >
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Name="type" Title="Antal" LabelFormatter="{Binding YFormatter}" MinValue="0"></lvc:Axis>
+                </lvc:CartesianChart.AxisY>
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Title="Dato" LabelsRotation="-35" Labels="{Binding Labels}">
+                        <lvc:Axis.Separator>
+                            <!-- force the separator step to 1, so it always display all the labels
+                            if you don't force the separator, it will be calculated 
+                            automatically, and could skip some labels,
+                            disable it to make it invisible -->
+                            <lvc:Separator IsEnabled="True" Step="1"></lvc:Separator>
+                        </lvc:Axis.Separator>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisX>
+            </lvc:CartesianChart>
+        </Grid>
+
+        <!--We call our NavBar user control to display the navigation menu-->
+        <uc:NavBar x:Name="NavBarMenu" HorizontalAlignment="Left" Height="720" Width="200" Visibility="Visible"/>
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="292,80,0,0" Name="startDateLineGraph"   
+        VerticalAlignment="Top" Width="115" BorderThickness="0" CalendarClosed="startDateLineGraph_CalendarClosed">
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
+        <!--The following stack panel contains options to choose two different waste categories to compare on the graph, as well as the option to import CSV data. They all share the selected Measurement Unit-->
+        <StackPanel Orientation="Vertical">
+            <Label Name="WasteCategory1" Content="Affaldstype 1" FontWeight="DemiBold" Width="80" Margin="870,200,0,-30"/>
+            <ComboBox Foreground="#2195F2" FontWeight="DemiBold" BorderThickness="3" x:Name="WCLineGraph" IsEditable="True" IsReadOnly="True" Text="-- Vælg Affaldstype 1 --" HorizontalAlignment="Left" Margin="1033,30,0,0" VerticalAlignment="Top" Width="155" DropDownClosed="WCLineGraph_DropDownClosed"/>
+            <Label Name="WasteCategory2" Content="Affaldstype 2" FontWeight="DemiBold" Width="83" Margin="870,20,0,-30" />
+            <ComboBox Foreground="#F34336" FontWeight="DemiBold" x:Name="WCLineGraph_WCCompare" BorderBrush="Red" BorderThickness="3" IsEditable="True" IsReadOnly="True" Text="-- Vælg Affaldstype 2 --" HorizontalAlignment="Left" Margin="1033,30,0,0" VerticalAlignment="Top" Width="155" DropDownClosed="WCLineGraph_WCCompare_DropDownClosed" UseLayoutRounding="False"/>
+            <Label Name="MULabel" Content="Måleenhed" FontWeight="DemiBold" Width="82" Margin="870,20,0,-30"/>
+            <ComboBox x:Name="MULineGraph" FontWeight="DemiBold" BorderThickness="3" IsEditable="True" IsReadOnly="True" Text="-- Vælg Måleenhed --" HorizontalAlignment="Left" Margin="1033,30,0,0" VerticalAlignment="Top" Width="155" DropDownClosed="MULineGraph_DropDownClosed"/>
+            <Label Name="CSVCompare" Content="CSV (Affaldstype 1)" FontWeight="DemiBold" Width="113" Margin="900,20,0,-30" />
+            <ComboBox x:Name="CSVLineGraph" BorderThickness="3" Foreground="#FEC007" FontWeight="Bold" IsEditable="True" IsReadOnly="True" Text="     Sammenlign CSV" HorizontalAlignment="Left" Margin="1033,30,0,0" VerticalAlignment="Top" Width="155" DropDownClosed="CSVLineGraph_DropDownClosed"/>
+
+        </StackPanel>
+
+        <DatePicker Height="25" HorizontalAlignment="Left" Margin="441,80,0,0" x:Name="endDateLineGraph"   
+            VerticalAlignment="Top" Width="115"  BorderThickness="0" CalendarClosed="endDateLineGraph_CalendarClosed">
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
+        <!--Button to reset the graph/reload the page-->
+        <Button x:Name="ResetGraph" Style="{StaticResource RoundCornerTeal}" Content="Nulstil graf / genindlæs CSV filer" Height="25" HorizontalAlignment="Left" Margin="589,80,0,0"  
+            VerticalAlignment="Top" Width="180" Click="resetGraph_Click"/>
+    </Grid>
+</Page>

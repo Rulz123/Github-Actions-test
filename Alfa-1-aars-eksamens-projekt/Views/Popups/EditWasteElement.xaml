@@ -1,0 +1,38 @@
+﻿<Window x:Class="Alfa_1_aars_eksamens_projekt.Views.Popups.EditWasteElement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Alfa_1_aars_eksamens_projekt.Views.Popups"
+        mc:Ignorable="d"
+        Title="Redigér Affald - Environmental Friendly" Height="800" Width="700">
+<!--We set the style of the grid-->
+    <Grid Style="{DynamicResource RoundCornerMediumGreenGrid}">
+        <!--We set a label to tell the user to edit the waste element-->
+        <Label Name="RedigérElement" Content="Redigér Affald" FontSize="25" HorizontalAlignment="Center" Margin="0,80,0,0" Width="190" />
+        <!--We make a textbox to input the amount in, and set the text to beeing wrapped. We also set the background colours-->
+        <TextBox Name="PickAmount" HorizontalAlignment="Left" BorderBrush="#A7D930" Background="#E9F6CB" BorderThickness="2" Height="23" Margin="218,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="257"/>
+        <!--We setup a combobox to insert the measurement units in. We add the path to ID and set the memberpath to name to fill in the drop down menu-->
+        <ComboBox Name="PickMU" DisplayMemberPath="name" SelectedValuePath="id" HorizontalAlignment="Left" Margin="218,256,0,0" VerticalAlignment="Top" Width="257" />
+        <!--We make another combobox to insert waste categories and set the valuepath to id and to display the names in the drop down menu-->
+        <ComboBox Name="PickCategory" DisplayMemberPath="name" SelectedValuePath="id" HorizontalAlignment="Left" Margin="218,316,0,0" VerticalAlignment="Top" Width="257" />
+        <!--We make a textbox to write in the description to a waste element-->
+        <TextBox Name="GiveDescription" HorizontalAlignment="Left" BorderBrush="#A7D930" Background="#E9F6CB" BorderThickness="2" Height="171" Margin="218,376,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="256"/>
+        <!--We make a combobox to add responsible employees and set the valuepath to ID and to display the names-->
+        <ComboBox Name="PickRE" DisplayMemberPath="name" SelectedValuePath="id" HorizontalAlignment="Center" Margin="0,580,0,0" VerticalAlignment="Top" Width="257" />
+        <!--We make a button called EditWE, and makes the content to say 'edit waste element' to tell the user what the button does. We make a button click event for the code behind.-->
+        <Button Name="EditWE" Content="Redigér affaldselement" Foreground="White" Background="#A7D930" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,650,0,0" VerticalAlignment="Top" Width="146" Height="27" Click="EditWE_Click"/>
+        <!--We create a label to tell the user to make a input of the amount in the top textbox-->
+        <Label Content="Indtast mængde" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="215,167,0,0" VerticalAlignment="Top"/>
+        <!--We make a label that tells the user to choose a measurement unit from the combobox-->
+        <Label Content="Vælg måleenhed" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="215,223,0,0" VerticalAlignment="Top"/>
+        <!--We setup a label that tells the user to choose a waste category from the combobox-->
+        <Label Content="Vælg kategori" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="215,283,0,0" VerticalAlignment="Top"/>
+        <!--We create a label that tells the user to enter a description about the waste element in the textbox-->
+        <Label Content="Indtast affalds beskrivelse" FontSize="14" FontWeight="Bold" HorizontalAlignment="Left" Margin="215,343,0,0" VerticalAlignment="Top"/>
+        <!--We create a label that tells the user to choose a responsible employee from the combobox-->
+        <Label Content="Vælg den ansvarlige medarbejder" FontSize="14" FontWeight="Bold" HorizontalAlignment="Center" Margin="215,552,267,0" VerticalAlignment="Top"/>
+
+    </Grid>
+
+</Window>

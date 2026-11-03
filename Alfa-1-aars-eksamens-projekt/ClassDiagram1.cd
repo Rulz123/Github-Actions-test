@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Alfa_1_aars_eksamens_projekt.Classes.Company">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAGAABAEAAAAAAQQAgAAAAA=</HashCode>
+      <FileName>Classes\Company.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Classes.CSV">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAIAAQAAACAAAAAAAAA=</HashCode>
+      <FileName>Classes\CSV.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Classes.MeasurementUnit">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAQgA=</HashCode>
+      <FileName>Classes\MeasurementUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Classes.ResponsibleEmployee">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAhAAAAAAAAAAIAAAAAABBAAEAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Classes\ResponsibleEmployee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Classes.Statistic">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Statistic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Classes.WasteCategory">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAABAAAAAgA=</HashCode>
+      <FileName>Classes\WasteCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Classes.WasteElement">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAoAAgAiAAAAAoAAIAACBAAABAAAwIAAAAAIAAAAAgA=</HashCode>
+      <FileName>Classes\WasteElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.ViewModels.Commands.SetPageContentCommand">
+    <Position X="4.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAiAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Commands\SetPageContentCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.ViewModels.MainWindowViewModel">
+    <Position X="2.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAIAAAAAAggAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>ViewModels\MainWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Views.Pages.CompanyProfile">
+    <Position X="8" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAgIAAAA=</HashCode>
+      <FileName>Views\Pages\CompanyProfile.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Views.Pages.LandingPage">
+    <Position X="6.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAACAAQAAAAAAiABAAAAAAAAAACIAAAAAAEAAAA=</HashCode>
+      <FileName>Views\Pages\LandingPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Views.Pages.LoginPage">
+    <Position X="4.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Views\Pages\LoginPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Views.Pages.RegisterCompanyProfile">
+    <Position X="2.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAARAAAAAAAEBAgAAASAAAAAIAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Views\Pages\RegisterCompanyProfile.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Views.Pages.Statistics">
+    <Position X="9.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABAAIAAEEAAAAQAACACAAKAAAEACEAABAgQABBAAAA=</HashCode>
+      <FileName>Views\Pages\Statistics.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Views.Pages.WasteInformation">
+    <Position X="11.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Pages\WasteInformation.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Views.Partials.NavBar">
+    <Position X="11.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAIAAAAAAAAAAAEAAACAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Views\Partials\NavBar.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Views.Popups.CreateResponsibleEmployee">
+    <Position X="13.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Views\Popups\CreateResponsibleEmployee.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Views.Popups.EditResponsibleEmployee">
+    <Position X="15" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Views\Popups\EditResponsibleEmployee.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Views.Popups.EditWasteElement">
+    <Position X="15" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Popups\EditWasteElement.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Views.Popups.RegisterWasteElement">
+    <Position X="13.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAQIIAAABAAAQAAAQABAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Popups\RegisterWasteElement.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

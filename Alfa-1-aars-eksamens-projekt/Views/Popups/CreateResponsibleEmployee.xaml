@@ -1,0 +1,21 @@
+﻿<Window x:Class="Alfa_1_aars_eksamens_projekt.Views.Popups.CreateResponsibleEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Alfa_1_aars_eksamens_projekt.Views.Popups"
+        mc:Ignorable="d"
+        Title="Opret Ansvarlig Medarbejder - Environmental Friendly" Height="400" Width="400">
+    <!--Lavet af Nichlas-->
+    <!--We set a grid, and add some styling in the dynamic resource-->
+    <Grid Style="{DynamicResource RoundCornerMediumGreenGrid}">
+        <!--We create a button, and sets the content to show the meaning of the button, and we make sure that the button is centered underneath the text box, and set the click event-->
+        <Button Content="Opret" HorizontalAlignment="Center" Margin="151,0,160,160" VerticalAlignment="Bottom" Width="75" x:Name="CreateButton" Click="CreateButton_Click" />
+        <!--We set the text box to the center, and makes sure that the text is wrapped, and bins it to the EmployeeName-->
+        <TextBox HorizontalAlignment="Center" Height="23" Margin="0,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" x:Name="EmployeeName"/>
+        <!--We make a label to tell the user to create a responsible employee, and center it. We also makes sure it is set along the top.-->
+        <Label Content="Opret ansvarlig medarbejder" HorizontalAlignment="Center" FontWeight="Bold" Margin="0,25,0,0" VerticalAlignment="Top"/>
+        <!--We create a label to telle the user to input the responsible employees name in the textbox below it, and we allign it to the top and center, underneath the previous label-->
+        <Label Content="Indtast medarbejders navn:" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
