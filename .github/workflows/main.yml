@@ -24,11 +24,11 @@ jobs:
         id: find-solution
         shell: pwsh
         run: |
-          $solution = Get-ChildItem -Path . -Filter "*.sln" -Recurse |
+          $solution = Get-ChildItem -Path . -Filter "*.csproj" -Recurse |
                       Select-Object -First 1
 
           if (-not $solution) {
-              throw "No solution file (.sln) found!"
+              throw "No csproject file (.csproj) found!"
           }
 
           Write-Host "Found solution: $($solution.FullName)"
