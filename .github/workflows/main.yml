@@ -24,11 +24,11 @@ jobs:
 
       - name: Verify solution exists
         run: |
-          ls -la
-          test -f "./Alfa-1-aars-eksamens-projekt.sln"
+          ls -la Alfa-1-aars-eksamens-projekt
+          test -f "./Alfa-1-aars-eksamens-projekt/Alfa-1-aars-eksamens-projekt.sln"
 
       - name: Restore dependencies
-        run: dotnet restore "./Alfa-1-aars-eksamens-projekt.sln"
+        run: dotnet restore "./Alfa-1-aars-eksamens-projekt/Alfa-1-aars-eksamens-projekt.sln"
 
       - name: Build solution
-        run: dotnet build "./Alfa-1-aars-eksamens-projekt.sln" --no-restore --configuration Release
+        run: dotnet build "./Alfa-1-aars-eksamens-projekt/Alfa-1-aars-eksamens-projekt.sln" --no-restore --configuration Release
