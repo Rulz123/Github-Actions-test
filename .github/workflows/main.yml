@@ -20,8 +20,23 @@ jobs:
       - name: Setup MSBuild
         uses: microsoft/setup-msbuild@v2
         
+      - name: Find solution file
+        id: find-solution
+        shell: pwsh
+        run: |
+          $solution = Get-ChildItem -Path . -Filter "*.sln" -Recurse |
+                      Select-Object -First 1
+
+          if (-not $solution) {
+              throw "No solution file (.sln) found!"
+          }
+
+          Write-Host "Found solution: $($solution.FullName)"
+
+          "SOLUTION_PATH=$($solution.FullName)" >> $env:GITHUB_ENV
+
       - name: Restore dependencies
-        run: msbuild
+        run: msbuild "$env:SOLUTION_PATH" /t:Restore
 
       - name: Build solution
-        run: msbuild 
+        run: msbuild "$env:SOLUTION_PATH" /p:Configuration=Release
