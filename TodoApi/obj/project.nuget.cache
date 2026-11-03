@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "SLbuFhNtvZc=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Nichlas\\Documents\\GitHub\\Github-Actions-test\\TodoApi\\TodoApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nichlas\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.12\\microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
+    "C:\\Users\\Nichlas\\.nuget\\packages\\microsoft.entityframeworkcore\\10.0.14\\microsoft.entityframeworkcore.10.0.14.nupkg.sha512",
+    "C:\\Users\\Nichlas\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\10.0.14\\microsoft.entityframeworkcore.abstractions.10.0.14.nupkg.sha512",
+    "C:\\Users\\Nichlas\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\10.0.14\\microsoft.entityframeworkcore.analyzers.10.0.14.nupkg.sha512",
+    "C:\\Users\\Nichlas\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\10.0.14\\microsoft.entityframeworkcore.inmemory.10.0.14.nupkg.sha512",
+    "C:\\Users\\Nichlas\\.nuget\\packages\\microsoft.openapi\\2.12.0\\microsoft.openapi.2.12.0.nupkg.sha512"
+  ],
+  "logs": []
+}
