@@ -1,0 +1,32 @@
+name: Build Main Branch
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build .NET Solution
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out source code
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      # Install .NET SDK
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      # Restore NuGet packages
+      - name: Restore dependencies
+        run: dotnet restore
+
+      # Build all projects in the repository
+      - name: Build solution
+        run: dotnet build --no-restore --configuration Release
