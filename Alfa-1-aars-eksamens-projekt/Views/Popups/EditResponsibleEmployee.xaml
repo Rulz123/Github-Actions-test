@@ -1,0 +1,21 @@
+﻿<Window x:Class="Alfa_1_aars_eksamens_projekt.Views.Popups.EditResponsibleEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Alfa_1_aars_eksamens_projekt.Views.Popups"
+        mc:Ignorable="d"
+        Title="Redigér Medarbejder - Environmental Friendly" Height="400" Width="400">
+<!--We set the styling in this grid we created-->
+    <Grid Style="{DynamicResource RoundCornerMediumGreenGrid}">
+<!--We create a button, and set the content to say edit, to indicate what the button does. We also make a button click event for the code behind, and bind it to the name EditButton. We also center it-->
+        <Button Content="Redigér" HorizontalAlignment="Center" Margin="151,0,160,160" VerticalAlignment="Bottom" Width="75" x:Name="EditButton" Click="EditButton_Click" />
+        <!--We make a text box for inputting the edit to the name, and center it. We also bind it to EmployeeName-->
+        <TextBox HorizontalAlignment="Center" Height="23" Margin="0,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" x:Name="EmployeeName"/>
+        <!--We set in a label to inform the user to write the name of the responsible employee in the textbox, and makes sure it is centered and anckored to the top with the margin-->
+        <Label Content="Indtast medarbejders navn:" HorizontalAlignment="Center" Margin="0,115,0,0" VerticalAlignment="Top"/>
+        <!--We create a label to tell the user to edit the responsible employees name, and make sure that the label is centered and anckored to the top with the margin-->
+        <Label Content="Redigér medarbejders navn" HorizontalAlignment="Center" FontWeight="Bold" Margin="0,25,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

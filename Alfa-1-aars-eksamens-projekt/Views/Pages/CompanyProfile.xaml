@@ -1,0 +1,56 @@
+﻿<Page x:Class="Alfa_1_aars_eksamens_projekt.Views.Pages.CompanyProfile"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:uc="clr-namespace:Alfa_1_aars_eksamens_projekt.Views.Partials"
+      xmlns:local="clr-namespace:Alfa_1_aars_eksamens_projekt.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="Virksomhedsprofil - Environmental Friendly">
+    <!--Lavet af Nichlas-->
+    <Grid Background="White" Style="{DynamicResource RoundCornerMediumGreenGrid}">
+        <!--We create a label to show the user the logged in company name-->
+        <Label Name="CompanyName" Content="Firma Navn" FontWeight="Bold" FontSize="42" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0"/>
+        <!--We setup a button to create a responsible employee, and input that message in the button, and bind the button click event to the button method in code behind-->
+        <Button Name="createRE" Padding="5" Content="Opret ansvarlig medarbejder" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="458,186,627,0" Click="createRE_Click" Width="170" Height="30" FontWeight="Bold"/>
+
+        <!--We create a list to display the created responsible employees-->
+        <ListView x:Name="ResponsibleEmployeeListView" HorizontalAlignment="Center" Margin="458,224,450,194" Width="372">
+            <ListView.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                    <Setter Property="BorderBrush" Value="#e9f6cb"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="Background" Value="#e9f6cb"/>
+                </Style>
+            </ListView.Resources>
+            <ListView.View>
+                <GridView>
+                    <!--We bind the different information from the database, to display the information about the responsible employee, and we set text for the topfield to show the user what each field is-->
+                    <GridViewColumn Header="ID" Width="25" DisplayMemberBinding="{Binding id}" />
+                    <GridViewColumn Header="Ansvarlig" Width="180" DisplayMemberBinding="{Binding name}" />
+                    <GridViewColumn Header="Rediger" Width="80">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <!--We create a button in the list at a responsible employee to edit the information of the responsible employee, and we bind the click event to the click method in code behind-->
+                                <Button Name="EditRE" Style="{StaticResource RoundCornerTeal}" Click="EditRE_Click">Rediger</Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Header="Slet" Width="80" >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <!--We create a button in the list to delete the responsible employee from the database, and we bind the click event to the click method in code behind-->
+                                <Button x:Name="DeleteRE" Content="Slet" Style="{StaticResource RoundCornerRed}" Click="DeleteRE_Click"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <uc:NavBar x:Name="NavBarMenu" HorizontalAlignment="Left" Width="200" Visibility="Visible"/>
+    </Grid>
+</Page>

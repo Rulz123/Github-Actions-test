@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Alfa_1_aars_eksamens_projekt.Classes.Company">
+    <Position X="3.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAGAABAEAAAAAAQQAgAAAAA=</HashCode>
+      <FileName>Classes\Company.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Classes.ResponsibleEmployee">
+    <Position X="8" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAhAAAAAAAAAAIAAAAAABBAAEAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Classes\ResponsibleEmployee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Classes.Statistic">
+    <Position X="8" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Statistic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Classes.WasteCategory">
+    <Position X="11.25" Y="7.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAABAAAAAgA=</HashCode>
+      <FileName>Classes\WasteCategory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Classes.MeasurementUnit">
+    <Position X="8" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAQgA=</HashCode>
+      <FileName>Classes\MeasurementUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Classes.CSV">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAIAAQAAACAAAAAAAAA=</HashCode>
+      <FileName>Classes\CSV.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Alfa_1_aars_eksamens_projekt.Classes.WasteElement">
+    <Position X="5.5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAoAAgAiAAAAAoAAIAACBAAABAAAwIAAAAAIAAAAAgA=</HashCode>
+      <FileName>Classes\WasteElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
