@@ -21,8 +21,7 @@ jobs:
         uses: microsoft/setup-msbuild@v2
         
       - name: Restore dependencies
-        run: msbuild "./Alfa-1-aars-eksamens-projekt/Alfa-1-aars-eksamens-projekt.sln" /t:Restore
+        run: msbuild
 
       - name: Build solution
-        run: msbuild "./Alfa-1-aars-eksamens-projekt/Alfa-1-aars-eksamens-projekt.sln" /p:Configuration=Release /p:RestorePackages=false
-
+        run: msbuild 
