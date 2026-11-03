@@ -11,24 +11,25 @@ on:
 jobs:
   build:
     name: Build C# Solution
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '8.0.x'
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v2
 
       - name: Verify solution exists
         run: |
-          ls -la Alfa-1-aars-eksamens-projekt
-          test -f "./Alfa-1-aars-eksamens-projekt/Alfa-1-aars-eksamens-projekt.sln"
+          ls Alfa-1-aars-eksamens-projekt
+          if (!(Test-Path "./Alfa-1-aars-eksamens-projekt/Alfa-1-aars-eksamens-projekt.sln")) {
+            throw "Solution file not found!"
+          }
 
       - name: Restore dependencies
-        run: dotnet restore "./Alfa-1-aars-eksamens-projekt/Alfa-1-aars-eksamens-projekt.sln"
+        run: msbuild "./Alfa-1-aars-eksamens-projekt/Alfa-1-aars-eksamens-projekt.sln" /t:Restore
 
       - name: Build solution
-        run: dotnet build "./Alfa-1-aars-eksamens-projekt/Alfa-1-aars-eksamens-projekt.sln" --no-restore --configuration Release
+        run: msbuild "./Alfa-1-aars-eksamens-projekt/Alfa-1-aars-eksamens-projekt.sln" /p:Configuration=Release /p:RestorePackages=false
+
